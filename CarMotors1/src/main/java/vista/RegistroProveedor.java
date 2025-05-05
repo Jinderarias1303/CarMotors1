@@ -16,7 +16,6 @@ import javax.swing.JOptionPane;
 public class RegistroProveedor extends javax.swing.JFrame {
 
       private ProveedorController proveedorcontroller;
-      private VistaPrincipal home;
 
       public RegistroProveedor() {
             proveedorcontroller = new ProveedorController();
@@ -155,9 +154,7 @@ public class RegistroProveedor extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-       public void sethome (VistaPrincipal home){
-       this.home = home;
-         }
+     
     
       private void RegistroProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroProveedorActionPerformed
          String nombre = txtNombre.getText().trim();
@@ -194,9 +191,10 @@ public class RegistroProveedor extends javax.swing.JFrame {
       }//GEN-LAST:event_RegistroProveedorActionPerformed
 
       private void MENUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MENUActionPerformed
-            this.dispose();
-            home.setVisible(true);
-            this.setVisible(false);
+             VistaPrincipal vistaPrincipal = new VistaPrincipal(); 
+            ProveedorCompras provedor = new ProveedorCompras(vistaPrincipal);
+            proveedor.setVisible(true);
+             this.setVisible(false);
       }//GEN-LAST:event_MENUActionPerformed
       
       public static void main(String args[]) {

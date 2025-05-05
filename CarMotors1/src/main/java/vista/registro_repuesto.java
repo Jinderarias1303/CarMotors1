@@ -244,16 +244,16 @@ public class registro_repuesto extends javax.swing.JFrame {
         LocalDate fecha = LocalDate.parse(fechaStr);
         int vida = Integer.parseInt(vidaStr);
 
-        RepuestoController.crearRepuesto(
-            nombre,
-            tipoStr,
-            marca,
-            idProveedor,
-            stockInt,
-            fecha,
-            vida,
-            estadoStr
-        );
+        controller.crearRepuesto(
+        nombre,
+        tipoStr,
+        marca,
+        idProveedor,
+        stockInt,
+        fecha,
+        vida,
+        estadoStr
+    );
 
         JOptionPane.showMessageDialog(this, "✅ Repuesto registrado con éxito.");
 
@@ -346,4 +346,14 @@ public class registro_repuesto extends javax.swing.JFrame {
       private javax.swing.JTextField tipo_repuesto;
       private javax.swing.JTextField vida_util;
       // End of variables declaration//GEN-END:variables
+
+    private static class controller {
+
+        private static void crearRepuesto(String nombre, String tipoStr, String marca, int idProveedor, int stockInt, LocalDate fecha, int vida, String estadoStr) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        public controller() {
+        }
+    }
 }

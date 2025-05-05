@@ -67,7 +67,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="190" width="180" height="40"/>
+              <AbsoluteConstraints x="90" y="190" width="190" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -86,14 +86,14 @@
         </Component>
         <Component class="javax.swing.JButton" name="RegistrarRepuesto">
           <Properties>
-            <Property name="text" type="java.lang.String" value="REGISTRAR REPUESTO"/>
+            <Property name="text" type="java.lang.String" value="GESTI&#xd3;N DE INVENTARIOS"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegistrarRepuestoActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="330" width="180" height="40"/>
+              <AbsoluteConstraints x="90" y="330" width="190" height="40"/>
             </Constraint>
           </Constraints>
         </Component>

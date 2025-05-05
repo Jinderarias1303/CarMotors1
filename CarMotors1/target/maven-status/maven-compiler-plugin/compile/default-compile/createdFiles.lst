@@ -5,6 +5,7 @@ modelo\Proveedor.class
 util\ConexionBD.class
 vista\RegistroCliente$1.class
 vista\VistaPrincipal$2.class
+vista\GestionInventario$1.class
 vista\RegistroVehiculo$4.class
 vista\registro_repuesto$4.class
 vista\ClienteFacturacion$2.class
@@ -20,6 +21,7 @@ vista\VistaPrincipal$1.class
 vista\registro_repuesto$2.class
 vista\registro_repuesto.class
 modelo\Repuesto.class
+vista\GestionInventario$3.class
 vista\ClienteFacturacion$3.class
 vista\VistaPrincipal$3.class
 vista\RegistroVehiculo$1.class
@@ -33,6 +35,8 @@ vista\RegistroProveedor.class
 vista\RegistroProveedor$2.class
 vista\registro_repuesto$1.class
 modelo\Cliente.class
+vista\GestionInventario$2.class
+vista\GestionInventario.class
 controlador\ProveedorController.class
 vista\RegistroVehiculo$2.class
 vista\VistaPrincipal$5.class

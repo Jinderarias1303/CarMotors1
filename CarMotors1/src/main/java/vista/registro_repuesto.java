@@ -10,7 +10,6 @@ package vista;
  */
 public class registro_repuesto extends javax.swing.JFrame {
 
-    private VistaPrincipal home;
     /**
      * Creates new form ads
      */
@@ -219,17 +218,15 @@ public class registro_repuesto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void sethome (VistaPrincipal home){
-       this.home = home;
-   }
-    
+  
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        home.setVisible(true);
-        this.setVisible(false);
+        GestionInventario repuesto = new GestionInventario();
+            repuesto.setVisible(true);
+            this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

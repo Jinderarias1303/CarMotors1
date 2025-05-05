@@ -65,13 +65,13 @@ public class VistaPrincipal extends javax.swing.JFrame {
         });
         jPanel1.add(RegistrarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 190, 40));
 
-        RegistrarRepuesto.setText("REGISTRAR REPUESTO");
+        RegistrarRepuesto.setText("GESTIÓN DE INVENTARIOS");
         RegistrarRepuesto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrarRepuestoActionPerformed(evt);
             }
         });
-        jPanel1.add(RegistrarRepuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 180, 40));
+        jPanel1.add(RegistrarRepuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 190, 40));
 
         RegistrarVehiculo.setText("REGISTRAR VEHICULO");
         RegistrarVehiculo.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +129,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
       }//GEN-LAST:event_RegistrarProveedorActionPerformed
 
       private void RegistrarRepuestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarRepuestoActionPerformed
-            registro_repuesto repuesto = new registro_repuesto();
+            GestionInventario repuesto = new GestionInventario();
            repuesto.sethome(this);
             repuesto.setVisible(true);
             this.setVisible(false);

@@ -9,7 +9,9 @@ vista\RegistroVehiculo$4.class
 vista\registro_repuesto$4.class
 vista\RegistroVehiculo.class
 vista\VistaPrincipal$6.class
+vista\ProveedorCompras$1.class
 vista\RegistroCliente.class
+vista\ProveedorCompras.class
 dao\ClienteDAO.class
 vista\VistaPrincipal$1.class
 vista\registro_repuesto$2.class
@@ -22,6 +24,7 @@ vista\registro_repuesto$5.class
 vista\registro_repuesto$3.class
 vista\RegistroVehiculo$3.class
 vista\VistaPrincipal.class
+vista\ProveedorCompras$2.class
 vista\RegistroProveedor.class
 vista\RegistroProveedor$2.class
 vista\registro_repuesto$1.class

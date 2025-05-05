@@ -109,6 +109,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
       private void RegistrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarUsuarioActionPerformed
             
       }//GEN-LAST:event_RegistrarUsuarioActionPerformed
@@ -121,7 +122,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
       }//GEN-LAST:event_RegistrarClienteActionPerformed
 
       private void RegistrarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarProveedorActionPerformed
-            RegistroProveedor proveedor= new RegistroProveedor();
+            ProveedorCompras proveedor= new ProveedorCompras();
             proveedor.sethome(this);
             proveedor.setVisible(true);
             this.setVisible(false);

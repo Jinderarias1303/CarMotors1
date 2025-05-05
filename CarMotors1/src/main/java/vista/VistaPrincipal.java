@@ -55,7 +55,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
                 RegistrarClienteActionPerformed(evt);
             }
         });
-        jPanel1.add(RegistrarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 180, 40));
+        jPanel1.add(RegistrarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 190, 40));
 
         RegistrarProveedor.setText("PROVEEDORES Y COMPRAS");
         RegistrarProveedor.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +115,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
       }//GEN-LAST:event_RegistrarUsuarioActionPerformed
 
       private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
-         RegistroCliente cliente = new RegistroCliente();
+         ClienteFacturacion cliente = new ClienteFacturacion();
          cliente.sethome(this);
          cliente.setVisible(true);
          this.setVisible(false);

@@ -49,7 +49,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         });
         jPanel1.add(RegistrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 180, 40));
 
-        RegistrarCliente.setText("REGISTRAR CLIENTES");
+        RegistrarCliente.setText("CLIENTES Y FACTURACIÓN");
         RegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrarClienteActionPerformed(evt);
@@ -57,13 +57,13 @@ public class VistaPrincipal extends javax.swing.JFrame {
         });
         jPanel1.add(RegistrarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 180, 40));
 
-        RegistrarProveedor.setText("REGISTRAR PROVEEDOR");
+        RegistrarProveedor.setText("PROVEEDORES Y COMPRAS");
         RegistrarProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrarProveedorActionPerformed(evt);
             }
         });
-        jPanel1.add(RegistrarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 180, 40));
+        jPanel1.add(RegistrarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 190, 40));
 
         RegistrarRepuesto.setText("REGISTRAR REPUESTO");
         RegistrarRepuesto.addActionListener(new java.awt.event.ActionListener() {

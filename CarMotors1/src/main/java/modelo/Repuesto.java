@@ -12,5 +12,5 @@ public class Repuesto {
       private int id_repuesto;
       private String nombre_repuesto;
       private String tipo_repuesto;
-      
+      private String marca_modelo;
 }

@@ -18,96 +18,99 @@ public class VistaPrincipal extends javax.swing.JFrame {
     
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+      // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+      private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        RegistrarUsuario = new javax.swing.JButton();
-        RegistrarCliente = new javax.swing.JButton();
-        RegistrarProveedor = new javax.swing.JButton();
-        RegistrarRepuesto = new javax.swing.JButton();
-        RegistrarVehiculo = new javax.swing.JButton();
-        RegistrarUsuario5 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+            jPanel1 = new javax.swing.JPanel();
+            RegistrarFacturas = new javax.swing.JButton();
+            RegistrarCliente = new javax.swing.JButton();
+            RegistrarProveedor = new javax.swing.JButton();
+            RegistrarRepuesto = new javax.swing.JButton();
+            RegistrarVehiculo = new javax.swing.JButton();
+            RegistrarMantenimientos = new javax.swing.JButton();
+            jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
+            setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+            setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+            jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+            jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        RegistrarUsuario.setText("REGISTRAR USUARIOS");
-        RegistrarUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarUsuarioActionPerformed(evt);
-            }
-        });
-        jPanel1.add(RegistrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 180, 40));
+            RegistrarFacturas.setText("REGISTRAR FACTURAS");
+            RegistrarFacturas.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        RegistrarFacturasActionPerformed(evt);
+                  }
+            });
+            jPanel1.add(RegistrarFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 210, 40));
 
-        RegistrarCliente.setText("CLIENTES Y FACTURACIÓN");
-        RegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarClienteActionPerformed(evt);
-            }
-        });
-        jPanel1.add(RegistrarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 190, 40));
+            RegistrarCliente.setText("CLIENTES Y FACTURACIÓN");
+            RegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        RegistrarClienteActionPerformed(evt);
+                  }
+            });
+            jPanel1.add(RegistrarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 210, 40));
 
-        RegistrarProveedor.setText("PROVEEDORES Y COMPRAS");
-        RegistrarProveedor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarProveedorActionPerformed(evt);
-            }
-        });
-        jPanel1.add(RegistrarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 190, 40));
+            RegistrarProveedor.setText("PROVEEDORES Y COMPRAS");
+            RegistrarProveedor.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        RegistrarProveedorActionPerformed(evt);
+                  }
+            });
+            jPanel1.add(RegistrarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 210, 40));
 
-        RegistrarRepuesto.setText("GESTIÓN DE INVENTARIOS");
-        RegistrarRepuesto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarRepuestoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(RegistrarRepuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 190, 40));
+            RegistrarRepuesto.setText("GESTIÓN DE INVENTARIOS");
+            RegistrarRepuesto.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        RegistrarRepuestoActionPerformed(evt);
+                  }
+            });
+            jPanel1.add(RegistrarRepuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 210, 40));
 
-        RegistrarVehiculo.setText("REGISTRAR VEHICULO");
-        RegistrarVehiculo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarVehiculoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(RegistrarVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 180, 40));
+            RegistrarVehiculo.setText("REGISTRAR VEHICULO");
+            RegistrarVehiculo.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        RegistrarVehiculoActionPerformed(evt);
+                  }
+            });
+            jPanel1.add(RegistrarVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 210, 40));
 
-        RegistrarUsuario5.setText("REGISTRAR USUARIOS");
-        RegistrarUsuario5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarUsuario5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(RegistrarUsuario5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 180, 40));
+            RegistrarMantenimientos.setText("REGISTRAR MANTENIMIENTOS");
+            RegistrarMantenimientos.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        RegistrarMantenimientosActionPerformed(evt);
+                  }
+            });
+            jPanel1.add(RegistrarMantenimientos, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 210, 40));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Arial", 3, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("CarMotors");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 250, -1));
+            jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+            jLabel1.setFont(new java.awt.Font("Arial", 3, 48)); // NOI18N
+            jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+            jLabel1.setText("CarMotors");
+            jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 250, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE)
-        );
+            javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+            getContentPane().setLayout(layout);
+            layout.setHorizontalGroup(
+                  layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE)
+            );
+            layout.setVerticalGroup(
+                  layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE)
+            );
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+            pack();
+      }// </editor-fold>//GEN-END:initComponents
 
     
-      private void RegistrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarUsuarioActionPerformed
-            
-      }//GEN-LAST:event_RegistrarUsuarioActionPerformed
+      private void RegistrarFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarFacturasActionPerformed
+            RegistroFactura factura = new RegistroFactura();
+            factura.sethome(this);
+            factura.setVisible(true);
+            this.setVisible(false);
+      }//GEN-LAST:event_RegistrarFacturasActionPerformed
 
       private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
          ClienteFacturacion cliente = new ClienteFacturacion(this);
@@ -137,9 +140,12 @@ public class VistaPrincipal extends javax.swing.JFrame {
             this.setVisible(false);
       }//GEN-LAST:event_RegistrarVehiculoActionPerformed
 
-      private void RegistrarUsuario5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarUsuario5ActionPerformed
-            // TODO add your handling code here:
-      }//GEN-LAST:event_RegistrarUsuario5ActionPerformed
+      private void RegistrarMantenimientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarMantenimientosActionPerformed
+           RegistroMantenimiento mantenimiento = new RegistroMantenimiento();
+           mantenimiento.sethome(this);
+           mantenimiento.setVisible(true);
+           this.setVisible(false);
+      }//GEN-LAST:event_RegistrarMantenimientosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,14 +178,14 @@ public class VistaPrincipal extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton RegistrarCliente;
-    private javax.swing.JButton RegistrarProveedor;
-    private javax.swing.JButton RegistrarRepuesto;
-    private javax.swing.JButton RegistrarUsuario;
-    private javax.swing.JButton RegistrarUsuario5;
-    private javax.swing.JButton RegistrarVehiculo;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    // End of variables declaration//GEN-END:variables
+      // Variables declaration - do not modify//GEN-BEGIN:variables
+      private javax.swing.JButton RegistrarCliente;
+      private javax.swing.JButton RegistrarFacturas;
+      private javax.swing.JButton RegistrarMantenimientos;
+      private javax.swing.JButton RegistrarProveedor;
+      private javax.swing.JButton RegistrarRepuesto;
+      private javax.swing.JButton RegistrarVehiculo;
+      private javax.swing.JLabel jLabel1;
+      private javax.swing.JPanel jPanel1;
+      // End of variables declaration//GEN-END:variables
 }

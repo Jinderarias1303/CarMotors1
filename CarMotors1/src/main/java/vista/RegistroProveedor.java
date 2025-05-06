@@ -23,9 +23,11 @@ public class RegistroProveedor extends javax.swing.JFrame {
             initComponents();
     }
 
-    private RegistroProveedor() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+      private RegistroProveedor() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+      }
+
+    
 
   
 
@@ -228,10 +230,8 @@ public class RegistroProveedor extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new RegistroProveedor().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+              new RegistroProveedor().setVisible(true);
         });
     }
 

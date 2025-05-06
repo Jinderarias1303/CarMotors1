@@ -14,7 +14,7 @@ public class ProveedorCompras extends javax.swing.JFrame {
     /**
      * Creates new form ProveedoresCompras
      */
-    public ProveedorCompras() {
+    public ProveedorCompras(VistaPrincipal vistaPrincipal) {
         initComponents();
     }
 
@@ -148,7 +148,8 @@ public class ProveedorCompras extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new ProveedorCompras().setVisible(true);
+            VistaPrincipal vistaPrincipal = null;
+            new ProveedorCompras(vistaPrincipal).setVisible(true);
         });
     }
 

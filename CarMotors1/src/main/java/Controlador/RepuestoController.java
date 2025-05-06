@@ -1,3 +1,5 @@
+package controlador;
+
 import dao.RepuestoDAO;
 import java.sql.Connection;
 import java.sql.SQLException;

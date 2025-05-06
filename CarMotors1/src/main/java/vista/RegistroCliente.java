@@ -10,9 +10,7 @@ package vista;
  */
 public class RegistroCliente extends javax.swing.JFrame {
     
-    /**
-     * Creates new form Registro
-     */
+  
     public RegistroCliente() {
         initComponents();
     }
@@ -165,7 +163,8 @@ public class RegistroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         ClienteFacturacion cliente = new ClienteFacturacion();
+        VistaPrincipal vistaPrincipal = new VistaPrincipal(); 
+        ClienteFacturacion cliente = new ClienteFacturacion(vistaPrincipal);
          cliente.setVisible(true);
          this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed

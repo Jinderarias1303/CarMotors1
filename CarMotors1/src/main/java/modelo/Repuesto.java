@@ -1,101 +1,114 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
 import java.time.LocalDate;
 
-/**
- *
- * @author jinde
- */
 public class Repuesto {
     public enum TipoRepuesto {
-        MECANICO, ELECTRICO, CARROCERIA, CONSUMO
+        mecanico, electrico, carroceria, consumo
     }
 
     public enum Estado {
-        DISPONIBLE, RESERVADO, FUERA_SERVICIO
+        disponible, reservado, fuera_servicio
     }
 
-    private int idRepuesto;
-    private String nombreRepuesto;
-    private TipoRepuesto tipoRepuesto;
-    private String marcaModelo;
-    private int idProveedor;
+    private String nombre_repuesto;
+    private TipoRepuesto tipo_repuesto;
+    private String marca_modelo;
+    private int id_proveedor;
     private int stock;
-    private LocalDate fechaIngreso;
-    private int vidaUtilMeses;
-    private Estado estado = Estado.DISPONIBLE;
+    private LocalDate fecha_ingreso;
+    private int vida_util_meses;
+    private Estado estado;
 
-    public Repuesto(String nombreRepuesto, TipoRepuesto tipoRepuesto, String marcaModelo,
-                    int idProveedor, int stock, LocalDate fechaIngreso, int vidaUtilMeses, Estado estado) {
+    public Repuesto() {
+    }
 
-        if (nombreRepuesto == null || nombreRepuesto.length() > 50)
-            throw new IllegalArgumentException("Nombre del repuesto inválido");
-
-        if (marcaModelo == null || marcaModelo.length() > 65)
-            throw new IllegalArgumentException("Marca/Modelo inválido");
-
-        if (stock < 0)
-            throw new IllegalArgumentException("Stock no puede ser negativo");
-
-        if (fechaIngreso == null)
-            throw new IllegalArgumentException("Fecha de ingreso no puede ser nula");
-
-        if (vidaUtilMeses <= 0)
-            throw new IllegalArgumentException("Vida útil debe ser mayor a 0");
-
-        this.nombreRepuesto = nombreRepuesto;
-        this.tipoRepuesto = tipoRepuesto;
-        this.marcaModelo = marcaModelo;
-        this.idProveedor = idProveedor;
+    public Repuesto(String nombre_repuesto, TipoRepuesto tipo_repuesto, String marca_modelo, int id_proveedor, int stock, LocalDate fecha_ingreso, int vida_util_meses, Estado estado) {
+        this.nombre_repuesto = nombre_repuesto;
+        this.tipo_repuesto = tipo_repuesto;
+        this.marca_modelo = marca_modelo;
+        this.id_proveedor = id_proveedor;
         this.stock = stock;
-        this.fechaIngreso = fechaIngreso;
-        this.vidaUtilMeses = vidaUtilMeses;
-        this.estado = estado != null ? estado : Estado.DISPONIBLE;
+        this.fecha_ingreso = fecha_ingreso;
+        this.vida_util_meses = vida_util_meses;
+        this.estado = estado;
     }
 
-    // Getters y setters (si los necesitás)
-
-    public int getIdRepuesto() {
-        return idRepuesto;
+    public String getNombre_repuesto() {
+        return nombre_repuesto;
     }
 
-    public void setIdRepuesto(int idRepuesto) {
-        this.idRepuesto = idRepuesto;
+    public void setNombre_repuesto(String nombre_repuesto) {
+        this.nombre_repuesto = nombre_repuesto;
     }
 
-    public String getNombreRepuesto() {
-        return nombreRepuesto;
+    public TipoRepuesto getTipo_repuesto() {
+        return tipo_repuesto;
     }
 
-    public TipoRepuesto getTipoRepuesto() {
-        return tipoRepuesto;
+    public void setTipo_repuesto(TipoRepuesto tipo_repuesto) {
+        this.tipo_repuesto = tipo_repuesto;
     }
 
-    public String getMarcaModelo() {
-        return marcaModelo;
+    public String getMarca_modelo() {
+        return marca_modelo;
     }
 
-    public int getIdProveedor() {
-        return idProveedor;
+    public void setMarca_modelo(String marca_modelo) {
+        this.marca_modelo = marca_modelo;
+    }
+
+    public int getId_proveedor() {
+        return id_proveedor;
+    }
+
+    public void setId_proveedor(int id_proveedor) {
+        this.id_proveedor = id_proveedor;
     }
 
     public int getStock() {
         return stock;
     }
 
-    public LocalDate getFechaIngreso() {
-        return fechaIngreso;
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
-    public int getVidaUtilMeses() {
-        return vidaUtilMeses;
+    public LocalDate getFecha_ingreso() {
+        return fecha_ingreso;
+    }
+
+    public void setFecha_ingreso(LocalDate fecha_ingreso) {
+        this.fecha_ingreso = fecha_ingreso;
+    }
+
+    public int getVida_util_meses() {
+        return vida_util_meses;
+    }
+
+    public void setVida_util_meses(int vida_util_meses) {
+        this.vida_util_meses = vida_util_meses;
     }
 
     public Estado getEstado() {
         return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return "Repuesto{" +
+                "nombre_repuesto='" + nombre_repuesto + '\'' +
+                ", tipo_repuesto=" + tipo_repuesto +
+                ", marca_modelo='" + marca_modelo + '\'' +
+                ", id_proveedor=" + id_proveedor +
+                ", stock=" + stock +
+                ", fecha_ingreso=" + fecha_ingreso +
+                ", vida_util_meses=" + vida_util_meses +
+                ", estado=" + estado +
+                '}';
     }
 }

@@ -1,47 +1,28 @@
 package controlador;
 
-import dao.RepuestoDAO;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.time.LocalDate;
 import modelo.Repuesto;
+import dao.RepuestoDAO;
+import java.time.LocalDate;
+
 
 public class RepuestoController {
-
-    private final RepuestoDAO repuestoDAO;
-
-    public RepuestoController(Connection conn) {
-        this.repuestoDAO = new RepuestoDAO(conn);
+    private RepuestoDAO repuestoDAO;
+    
+    public RepuestoController(){
+         this.repuestoDAO = new RepuestoDAO(); 
     }
-
-    public void crearRepuesto(String nombreRepuesto, String tipoStr, String marcaModelo,
-                              int idProveedor, int stock, LocalDate fechaIngreso,
-                              int vidaUtilMeses, String estadoStr) {
-
-        try {
-            Repuesto.TipoRepuesto tipo = Repuesto.TipoRepuesto.valueOf(tipoStr.toUpperCase());
-            Repuesto.Estado estado = estadoStr != null
-                    ? Repuesto.Estado.valueOf(estadoStr.toUpperCase())
-                    : Repuesto.Estado.DISPONIBLE;
-
-            Repuesto repuesto = new Repuesto(
-                nombreRepuesto,
-                tipo,
-                marcaModelo,
-                idProveedor,
-                stock,
-                fechaIngreso,
-                vidaUtilMeses,
-                estado
-            );
-
-            repuestoDAO.insertar(repuesto);
-            System.out.println("✅ Repuesto insertado con éxito.");
-
-        } catch (IllegalArgumentException e) {
-            System.err.println("❌ Error de validación: " + e.getMessage());
-        } catch (SQLException e) {
-            System.err.println("❌ Error al insertar en la base de datos: " + e.getMessage());
-        }
+    
+    public boolean registrarRepuesto(String nombre_repuesto, String tipo_repuesto, String marca_modelo, int id_proveedor, int stock, LocalDate fecha_ingreso, int vida_util_meses, String estado){
+          Repuesto repuesto =  new Repuesto();
+          repuesto.setNombre_repuesto(nombre_repuesto);
+          repuesto.setTipo_repuesto(Repuesto.TipoRepuesto.valueOf(tipo_repuesto.toLowerCase()));
+          repuesto.setMarca_modelo(marca_modelo);
+          repuesto.setId_proveedor(id_proveedor);
+          repuesto.setStock(stock);
+          repuesto.setFecha_ingreso(LocalDate.EPOCH);
+          repuesto.setVida_util_meses(vida_util_meses);
+          repuesto.setEstado(Repuesto.Estado.valueOf(estado.toLowerCase()));
+          
+          return repuestoDAO.insertarRepuesto(repuesto);
     }
 }

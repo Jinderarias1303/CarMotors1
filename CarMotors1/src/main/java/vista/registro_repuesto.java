@@ -5,6 +5,7 @@
  */
 package vista;
 
+import controlador.RepuestoController;
 import java.awt.HeadlessException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
@@ -12,11 +13,11 @@ import javax.swing.JOptionPane;
 
 
 public class registro_repuesto extends javax.swing.JFrame {
-
-    /**
-     * Creates new form ads
-     */
+     private RepuestoController repuestocontroller;
+     private VistaPrincipal home;
+      
     public registro_repuesto() {
+        repuestocontroller =  new RepuestoController();
         initComponents();
     }
 
@@ -222,7 +223,7 @@ public class registro_repuesto extends javax.swing.JFrame {
       }// </editor-fold>                        
 
   
-    private void RegistrarActionPerformed(java.awt.event.ActionEvent evt) {                                          
+   private void RegistrarActionPerformed(java.awt.event.ActionEvent evt) {
     String nombre = nombre_repuesto.getText().trim();
     String tipoStr = tipo_repuesto.getText().trim();
     String marca = marca_modelo.getText().trim();
@@ -232,6 +233,7 @@ public class registro_repuesto extends javax.swing.JFrame {
     String vidaStr = vida_util.getText().trim();
     String estadoStr = estado.getText().trim();
 
+    // Verificación de campos vacíos
     if (nombre.isEmpty() || tipoStr.isEmpty() || marca.isEmpty() ||
         proveedorStr.isEmpty() || stockStr.isEmpty() || fechaStr.isEmpty() ||
         vidaStr.isEmpty() || estadoStr.isEmpty()) {
@@ -240,45 +242,53 @@ public class registro_repuesto extends javax.swing.JFrame {
     }
 
     try {
+        // Validación de datos numéricos
         int idProveedor = Integer.parseInt(proveedorStr);
         int stockInt = Integer.parseInt(stockStr);
-        LocalDate fecha = LocalDate.parse(fechaStr);
         int vida = Integer.parseInt(vidaStr);
 
-        //RepuestoController.crearRepuesto(
-           // nombre,
-            //tipoStr,
-            //marca,
-            //idProveedor,
-            //stockInt,
-            //fecha,
-            //vida,
-            //estadoStr
-      //  );
+        // Validación del formato de la fecha
+        LocalDate fecha;
+        try {
+            fecha = LocalDate.parse(fechaStr);  // Esto lanza una excepción si el formato es incorrecto
+        } catch (DateTimeParseException e) {
+            JOptionPane.showMessageDialog(this, "⚠️ La fecha debe tener el formato yyyy-MM-dd.");
+            return;
+        }
 
-        JOptionPane.showMessageDialog(this, "✅ Repuesto registrado con éxito.");
+        // Registrar el repuesto usando el controlador
+        boolean exito = repuestocontroller.registrarRepuesto(nombre, tipoStr, marca, idProveedor, stockInt, fecha, HIDE_ON_CLOSE, estadoStr);
 
-        // Limpiar campos
-        nombre_repuesto.setText("");
-        tipo_repuesto.setText("");
-        marca_modelo.setText("");
-        id_proveedor.setText("");
-        stock.setText("");
-        fecha_ingreso.setText("");
-        vida_util.setText("");
-        estado.setText("");
+        // Verificar si el registro fue exitoso
+        if (exito) {
+            JOptionPane.showMessageDialog(this, "✅ Repuesto registrado con éxito.");
+            limpiarCampos(); // Limpiar los campos de texto
+        } else {
+            JOptionPane.showMessageDialog(this, "⚠️ Error al registrar el repuesto.");
+        }
 
     } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(this, "⚠️ Stock, vida útil e ID proveedor deben ser números.");
-    } catch (DateTimeParseException e) {
-        JOptionPane.showMessageDialog(this, "⚠️ La fecha debe tener el formato yyyy-MM-dd.");
     } catch (HeadlessException e) {
         JOptionPane.showMessageDialog(this, "❌ Error al registrar repuesto: " + e.getMessage());
     }
-    }                                         
+}
+
+// Limpiar los campos de texto después de registrar el repuesto
+private void limpiarCampos() {
+    nombre_repuesto.setText("");
+    tipo_repuesto.setText("");
+    marca_modelo.setText("");
+    id_proveedor.setText("");
+    stock.setText("");
+    fecha_ingreso.setText("");
+    vida_util.setText("");
+    estado.setText("");
+}
+                              
 
     private void MenuActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        GestionInventario repuesto = new GestionInventario();
+            GestionInventario repuesto = new GestionInventario();
             repuesto.setVisible(true);
             this.setVisible(false);
     }                                    
@@ -291,35 +301,7 @@ public class registro_repuesto extends javax.swing.JFrame {
         // TODO add your handling code here:
     }                                             
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(registro_repuesto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(registro_repuesto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(registro_repuesto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(registro_repuesto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
               new registro_repuesto().setVisible(true);
         });

@@ -18,10 +18,16 @@ public class RegistroProveedor extends javax.swing.JFrame {
       private ProveedorController proveedorcontroller;
       private VistaPrincipal home;
 
-      public RegistroProveedor() {
-            proveedorcontroller = new ProveedorController();
+      public RegistroProveedor(VistaPrincipal home) {
+        this.home = home;
             initComponents();
-      }
+    }
+
+    private RegistroProveedor() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+  
 
       /**
        * This method is called from within the constructor to initialize the form.
@@ -155,9 +161,6 @@ public class RegistroProveedor extends javax.swing.JFrame {
         pack();
     }// </editor-fold>                        
     
-       public void sethome (VistaPrincipal home){
-       this.home = home;
-         }
     
       private void RegistroProveedorActionPerformed(java.awt.event.ActionEvent evt) {                                                  
          String nombre = txtNombre.getText().trim();
@@ -194,14 +197,41 @@ public class RegistroProveedor extends javax.swing.JFrame {
       }                                                 
 
       private void MENUActionPerformed(java.awt.event.ActionEvent evt) {                                     
-            this.dispose();
-            home.setVisible(true);
+           VistaPrincipal vista = new VistaPrincipal();
+            RegistroProveedor rp = new RegistroProveedor(vista);
             this.setVisible(false);
       }                                    
       
-      public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(() -> {
-            new RegistroProveedor().setVisible(true);
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(RegistroCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(RegistroCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(RegistroCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(RegistroCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new RegistroProveedor().setVisible(true);
+            }
         });
     }
 

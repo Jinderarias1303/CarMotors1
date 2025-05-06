@@ -9,7 +9,7 @@ public class ConexionBD {
     private static final String db = "carmotors";
     private static final String url = host + db;
     private static final String user = "root";
-    private static final String password = "JGAS1303"; 
+    private static final String password = "root"; 
 
     public static Connection getConnection() throws ClassNotFoundException {
         Connection conn = null;

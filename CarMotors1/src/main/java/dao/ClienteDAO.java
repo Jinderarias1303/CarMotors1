@@ -31,32 +31,5 @@ public class ClienteDAO {
           }
           return false;
     }
-
-    public List<Cliente> listar() {
-        List<Cliente> lista = new ArrayList<>();
-        String sql = "SELECT * FROM cliente";
-
-        try (Connection conn = ConexionBD.getConnection();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
-
-            while (rs.next()) {
-                Cliente c = new Cliente(
-                        rs.getInt("id"),
-                        rs.getString("nro_identidad"),
-                        rs.getString("nombre"),
-                        rs.getString("telefono"),
-                        rs.getString("correo")
-                );
-                lista.add(c);
-            }
-
-        } catch (SQLException e) {
-            System.err.println("❌ Error al listar clientes: " + e.getMessage());
-        } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
-          }
-
-        return lista;
-    }
+    
 }

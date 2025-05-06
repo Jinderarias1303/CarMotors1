@@ -161,8 +161,8 @@ public class RegistroProveedor extends javax.swing.JFrame {
     
       private void RegistroProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroProveedorActionPerformed
          String nombre = txtNombre.getText().trim();
-    String telefonoStr = txtTelefono.getText().trim();
-    String frecuenciaStr = txtFrecuencia.getText().trim();
+         String telefonoStr = txtTelefono.getText().trim();
+         String frecuenciaStr = txtFrecuencia.getText().trim();
 
     if (nombre.isEmpty() || telefonoStr.isEmpty() || frecuenciaStr.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Por favor complete todos los campos.");

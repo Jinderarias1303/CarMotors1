@@ -8,7 +8,7 @@ import java.awt.HeadlessException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import javax.swing.JOptionPane;
-import controlador.RepuestoController;
+
 
 public class registro_repuesto extends javax.swing.JFrame {
 
@@ -244,16 +244,16 @@ public class registro_repuesto extends javax.swing.JFrame {
         LocalDate fecha = LocalDate.parse(fechaStr);
         int vida = Integer.parseInt(vidaStr);
 
-        RepuestoController.crearRepuesto(
-            nombre,
-            tipoStr,
-            marca,
-            idProveedor,
-            stockInt,
-            fecha,
-            vida,
-            estadoStr
-        );
+        //RepuestoController.crearRepuesto(
+           // nombre,
+            //tipoStr,
+            //marca,
+            //idProveedor,
+            //stockInt,
+            //fecha,
+            //vida,
+            //estadoStr
+      //  );
 
         JOptionPane.showMessageDialog(this, "✅ Repuesto registrado con éxito.");
 

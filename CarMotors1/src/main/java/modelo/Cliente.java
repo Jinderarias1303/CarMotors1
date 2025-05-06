@@ -1,7 +1,7 @@
 package modelo;
 
 public class Cliente {
-    private int id;
+   
     private String nroIdentidad;
     private String nombre;
     private String telefono;
@@ -11,8 +11,8 @@ public class Cliente {
     public Cliente() {}
 
     // Constructor completo
-    public Cliente(int id, String nroIdentidad, String nombre, String telefono, String correo) {
-        this.id = id;
+    public Cliente( String nroIdentidad, String nombre, String telefono, String correo) {
+       
         this.nroIdentidad = nroIdentidad;
         this.nombre = nombre;
         this.telefono = telefono;
@@ -20,9 +20,6 @@ public class Cliente {
     }
 
     // Getters y setters
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
     public String getNroIdentidad() { return nroIdentidad; }
     public void setNroIdentidad(String nroIdentidad) { this.nroIdentidad = nroIdentidad; }
 
@@ -37,7 +34,7 @@ public class Cliente {
 
       @Override
       public String toString() {
-            return "Cliente{" + "id=" + id + ", nroIdentidad=" + nroIdentidad + ", nombre=" + nombre + ", telefono=" + telefono + ", correo=" + correo + '}';
+            return "Cliente{" +  " nroIdentidad=" + nroIdentidad + ", nombre=" + nombre + ", telefono=" + telefono + ", correo=" + correo + '}';
       }
     
     

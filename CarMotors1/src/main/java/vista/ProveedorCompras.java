@@ -111,7 +111,7 @@ public class ProveedorCompras extends javax.swing.JFrame {
     }//GEN-LAST:event_menuActionPerformed
 
     private void registroProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroProveedorActionPerformed
-        // RegistroProveedor registroProveedor= new RegistroProveedor();
+        RegistroProveedor registroProveedor = new RegistroProveedor();
          registroProveedor.setVisible(true);
          this.setVisible(false);
     }//GEN-LAST:event_registroProveedorActionPerformed
